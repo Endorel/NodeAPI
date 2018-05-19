@@ -8,7 +8,7 @@ const mongoose = require('mongoose');
 const productRoutes = require('./api/routes/products');
 const orderRoutes = require('./api/routes/orders');
 
-mongoose.connect('mongodb+srv://Endorel:M00ch1ck@nodeapiproject-xroey.mongodb.net/test');
+mongoose.connect('mongodb+srv://Endorel:' + process.env.MONGO_ATLAS_PW + '@nodeapiproject-xroey.mongodb.net/test');
 
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({extended: false}));
